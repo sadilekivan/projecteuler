@@ -122,6 +122,19 @@ fn traverse3<const S: usize>(depth: usize, grid: &mut [[u64; S]; S]) -> u64 {
     return traverse3::<S>(depth + 1, grid);
 }
 
+fn factorial(mut x: f64) -> f64 {
+    for i in 2..x as u64 {
+        x *= i as f64;
+    }
+    x
+}
+
+#[allow(non_snake_case)]
+// trying out combinatorics
+fn K(k: f64, n: f64) -> f64 {
+    factorial(n) / (factorial(k)*factorial(n - k))
+}
+
 fn main() {
     // This approach is fun to simulate but takes too long for a grid of 20
     let mut traveler_v = vec![GridTraversal::<4>::default()];
@@ -137,4 +150,8 @@ fn main() {
     let grid = &mut [[0u64; S+1]; S+1];
     let count = traverse3(0, grid); 
     dbg!(count);
+
+    // There is a 40 long path of Rights or Downs, with always 20 Rights and 20 Downs
+    // In other words how many ways can I put 20 Rights/Downs into a 40 places, the latter is the other (i.e. if I put 20 Rights the rest must be Downs, and if I put 20 Downs the rest is Rights)
+    dbg!(K(20., 40.));
 }
