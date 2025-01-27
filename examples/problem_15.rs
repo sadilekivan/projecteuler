@@ -131,7 +131,7 @@ fn factorial(mut x: f64) -> f64 {
 
 #[allow(non_snake_case)]
 // trying out combinatorics
-fn K(k: f64, n: f64) -> f64 {
+fn K(n: f64, k: f64) -> f64 {
     factorial(n) / (factorial(k)*factorial(n - k))
 }
 
@@ -153,5 +153,5 @@ fn main() {
 
     // There is a 40 long path of Rights or Downs, with always 20 Rights and 20 Downs
     // In other words how many ways can I put 20 Rights/Downs into a 40 places, the latter is the other (i.e. if I put 20 Rights the rest must be Downs, and if I put 20 Downs the rest is Rights)
-    dbg!(K(20., 40.));
+    dbg!(K(40., 20.));
 }
