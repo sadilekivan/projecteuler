@@ -1,5 +1,3 @@
-use std::cmp;
-
 // Perform Collatz operation on `n`
 fn collatz_op(n: u64) -> u64 {
     if n % 2 == 0 {
