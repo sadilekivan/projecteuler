@@ -2,13 +2,8 @@ fn is_palindrome(data: &str) -> bool {
     let ch_v: Vec<char> = data.chars().collect();
     let (ch_v1, ch_v2) = ch_v.split_at(ch_v.len() / 2);
     //dbg!(&ch_v, &ch_v1, &ch_v2);
-    for (a, b) in ch_v1.iter().zip(ch_v2.iter().rev()) {
-        if a != b {
-            return false;
-        }
-    }
 
-    true
+    ch_v1.iter().zip(ch_v2.iter().rev()).all(|(a, b)| a == b)
 }
 
 fn main() {

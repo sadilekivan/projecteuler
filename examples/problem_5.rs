@@ -1,10 +1,5 @@
-fn is_divisible_by_range(range: impl Iterator<Item = u32>, n: u32) -> bool {
-    for x in range {
-        if n % x != 0 {
-            return false;
-        }
-    }
-    true
+fn is_divisible_by_range(mut range: impl Iterator<Item = u32>, n: u32) -> bool {
+    range.all(|x| n % x == 0)
 }
 
 fn main() {
