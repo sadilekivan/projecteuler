@@ -1,22 +1,9 @@
 use std::collections::HashSet;
 
-pub fn is_prime(n: u64) -> bool {
-    // We can start range at 2, this skips 0, 1, 2 because they are prime. End just before the number tested
-    
-    let mut i = 2;
-    while i*i <= n {
-        if n % i == 0 {
-            return false;
-        }
-        i += 1;
-    }
-    return true;
-}
-
 #[derive(Debug)]
 pub struct TriangleNumberIter {
     n: u64,
-    incerment: u64
+    incerment: u64,
 }
 
 impl Default for TriangleNumberIter {
@@ -28,7 +15,7 @@ impl Default for TriangleNumberIter {
 impl Iterator for TriangleNumberIter {
     type Item = u64;
 
-    fn next(&mut self) -> Option<Self::Item> {   
+    fn next(&mut self) -> Option<Self::Item> {
         let result = self.n;
 
         self.n += self.incerment;
@@ -59,13 +46,12 @@ pub fn factors_of_n(n: u64) -> HashSet<u64> {
 
     let top = (n as f64).sqrt() as u64;
     for d in 2..=top {
-
         if n % d == 0 {
             // Divisible by d, let's push it
             factors_set.insert(d);
             // But if n is divisible by d, the result is also a divisor
             let x = n / d;
-            
+
             // By using a HashSet we account for result being the same as d or some other divisor
             factors_set.insert(x);
         }

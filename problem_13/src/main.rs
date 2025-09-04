@@ -1,5 +1,8 @@
 /// This one would be too simple with a BigInt impelentation from a crate, so I played around here with mine
-use std::{cmp, iter, ops::{Add, AddAssign}};
+use std::{
+    cmp, iter,
+    ops::{Add, AddAssign},
+};
 
 #[derive(Debug)]
 struct BigInt(String);
@@ -16,8 +19,14 @@ fn add_big_number(a: &str, b: &str) -> String {
 
     // Working with iterators in reverse, just like adding on paper, padding with zeroes allows us to just zip them.
     let count = cmp::max(a.len(), b.len());
-    let iter_a = a.chars().rev().chain(iter::repeat('0').take(count - a.len()));
-    let iter_b = b.chars().rev().chain(iter::repeat('0').take(count - b.len()));
+    let iter_a = a
+        .chars()
+        .rev()
+        .chain(iter::repeat('0').take(count - a.len()));
+    let iter_b = b
+        .chars()
+        .rev()
+        .chain(iter::repeat('0').take(count - b.len()));
 
     for (a, b) in iter_a.zip(iter_b) {
         // Unsafe to just unwrap a possible digit, but for the sake of the problem I assume the input is okay
@@ -56,11 +65,13 @@ impl AddAssign for BigInt {
     }
 }
 
-
 fn main() {
     let mut total = BigInt::default();
-    
-    for n in include_str!("problem_13.data").lines().map(|line| BigInt(line.to_owned())) {
+
+    for n in include_str!("input.data")
+        .lines()
+        .map(|line| BigInt(line.to_owned()))
+    {
         total += n;
     }
 

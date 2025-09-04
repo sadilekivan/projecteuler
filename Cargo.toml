@@ -3,4 +3,5 @@ name = "project-euler-net"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
+[workspace]
+members = ["problem_1", "problem_10", "problem_11", "problem_12", "problem_13", "problem_14", "problem_15", "problem_16", "problem_17", "problem_18", "problem_19", "problem_2", "problem_3", "problem_4", "problem_5", "problem_6", "problem_67", "problem_7", "problem_8", "problem_9"]

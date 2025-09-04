@@ -3,5 +3,85 @@
 version = 4
 
 [[package]]
+name = "problem_1"
+version = "0.1.0"
+
+[[package]]
+name = "problem_10"
+version = "0.1.0"
+
+[[package]]
+name = "problem_11"
+version = "0.1.0"
+
+[[package]]
+name = "problem_12"
+version = "0.1.0"
+
+[[package]]
+name = "problem_13"
+version = "0.1.0"
+
+[[package]]
+name = "problem_14"
+version = "0.1.0"
+
+[[package]]
+name = "problem_15"
+version = "0.1.0"
+
+[[package]]
+name = "problem_16"
+version = "0.1.0"
+
+[[package]]
+name = "problem_17"
+version = "0.1.0"
+
+[[package]]
+name = "problem_18"
+version = "0.1.0"
+
+[[package]]
+name = "problem_19"
+version = "0.1.0"
+
+[[package]]
+name = "problem_2"
+version = "0.1.0"
+
+[[package]]
+name = "problem_3"
+version = "0.1.0"
+
+[[package]]
+name = "problem_4"
+version = "0.1.0"
+
+[[package]]
+name = "problem_5"
+version = "0.1.0"
+
+[[package]]
+name = "problem_6"
+version = "0.1.0"
+
+[[package]]
+name = "problem_67"
+version = "0.1.0"
+
+[[package]]
+name = "problem_7"
+version = "0.1.0"
+
+[[package]]
+name = "problem_8"
+version = "0.1.0"
+
+[[package]]
+name = "problem_9"
+version = "0.1.0"
+
+[[package]]
 name = "project-euler-net"
 version = "0.1.0"
